@@ -4,11 +4,12 @@
     // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "msedge",
             "request": "launch",
             "name": "Запустить Microsoft Edge на localhost",
-            "url": "http://localhost:8080",
+            "url": "chertneptuna.github.io",
             "webRoot": "${workspaceFolder}"
         }
     ]
