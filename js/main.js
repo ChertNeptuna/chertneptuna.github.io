@@ -1,587 +1,321 @@
-;(function () {
-	
-	'use strict';
+window.addEventListener('load', () => {
+	document.querySelector('#homeAnimation h1').classList.add('animated');
+	setTimeout(() => {
+		document.querySelector('#homeAnimation h2').classList.add('animated');
+	}, 300)
+});
 
+; (function () {
+	$("#datetimePicker").flatpickr({
+		locale: "ru",
+		enableTime: true,
+		dateFormat: "d-m-Y H:i",
+		time_24hr: true,
+		minuteIncrement: 1,
+		minDate: new Date()
+	});
 
-
-	// iPad and iPod detection	
-	var isiPad = function(){
-		return (navigator.platform.indexOf("iPad") != -1);
-	};
-
-	var isiPhone = function(){
-	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
-			(navigator.platform.indexOf("iPod") != -1)
-	    );
-	};
-
-	var fullHeight = function() {
-		if ( !isiPad() && !isiPhone() ) {
-			$('.js-fullheight').css('height', $(window).height());
-			$(window).resize(function(){
-				$('.js-fullheight').css('height', $(window).height());
-			})
-		}
-		
-
-	};
-
-	var sliderMain = function() {
-		
-	  	$('#fh5co-home .flexslider').flexslider({
-			animation: "fade",
-			slideshowSpeed: 5000
-	  	});
-
-	  	$('#fh5co-home .flexslider .slides > li').css('height', $(window).height());	
-	  	$(window).resize(function(){
-	  		$('#fh5co-home .flexslider .slides > li').css('height', $(window).height());	
-	  	});
-
-	};
-
-	var sliderSayings = function() {
-		$('#fh5co-sayings .flexslider').flexslider({
-			animation: "slide",
-			slideshowSpeed: 5000,
-			directionNav: false,
-			controlNav: true,
-			smoothHeight: true,
-			reverse: true
-	  	});
-	}
-
-	var offcanvasMenu = function() {
-		$('body').prepend('<div id="fh5co-offcanvas" />');
-		$('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>');
-
-		$('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function(){
-
-			var $this = $(this);
-
-			$('#fh5co-offcanvas').append($this.clone());
-
-		});
-		// $('#fh5co-offcanvas').append
-	};
-
-	var mainMenuSticky = function() {
-		
-		var sticky = $('.js-sticky');
-
-		sticky.css('height', sticky.height());
-		$(window).resize(function(){
-			sticky.css('height', sticky.height());
-		});
-
-		var $section = $('.fh5co-main-nav');
-		
-		$section.waypoint(function(direction) {
-		  	
-		  	if (direction === 'down') {
-
-			    	$section.css({
-			    		'position' : 'fixed',
-			    		'top' : 0,
-			    		'width' : '100%',
-			    		'z-index' : 99999
-			    	}).addClass('fh5co-shadow');;
-
-			}
-
-		}, {
-	  		offset: '0px'
-		});
-
-		$('.js-sticky').waypoint(function(direction) {
-		  	if (direction === 'up') {
-		    	$section.attr('style', '').removeClass('fh5co-shadow');
-		  	}
-		}, {
-		  	offset: function() { return -$(this.element).height() + 69; }
-		});
-
-	};
-	
-	// Parallax
-	var parallax = function() {
-
+	var parallax = function () {
 		$(window).stellar();
 
 	};
 
+	var scrolledWindow = function () {
+		$(window).scroll(function () {
+			const scrollPos = $(this).scrollTop();
 
-	// Burger Menu
-	var burgerMenu = function() {
+			const maxShift = 200;
+			const maxScroll = 500;
 
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
+			const shift = Math.min(scrollPos / 4, maxShift);
+			const opacity = Math.max(1 - scrollPos / maxScroll, 0);
 
-			var $this = $(this);
-
-			$('body').toggleClass('fh5co-overflow offcanvas-visible');
-			$this.toggleClass('active');
-			event.preventDefault();
-
+			$('#homeAnimation').css({
+				'transform': `translateY(${shift}px)`,
+				'opacity': opacity
+			});
 		});
-
-	};
-
-	var scrolledWindow = function() {
-
-		$(window).scroll(function(){
-
-			var scrollPos = $(this).scrollTop();
-
-
-			$('#fh5co-home .fh5co-text').css({
-		      'opacity' : 1-(scrollPos/300),
-		      'margin-top' : (-212) + (scrollPos/1)
-		   });
-
-		   $('#fh5co-home .flexslider .fh5co-overlay').css({
-				'opacity' : (.5)+(scrollPos/2000)
-		   });
-
-		   if (scrollPos > 300) {
-				$('#fh5co-home .fh5co-text').css('display', 'none');
-			} else {
-				$('#fh5co-home .fh5co-text').css('display', 'block');
-			}
-		   
-
-		});
-
-		$(window).resize(function() {
-			if ( $('body').hasClass('offcanvas-visible') ) {
-		   	$('body').removeClass('offcanvas-visible');
-		   	$('.js-fh5co-nav-toggle').removeClass('active');
-		   }
-		});
-		
 	};
 
 
-	var goToTop = function() {
+	var goToTop = function () {
 
-		$('.js-gotop').on('click', function(event){
-			
+		$('.js-gotop').on('click', function (event) {
+
 			event.preventDefault();
 
 			$('html, body').animate({
 				scrollTop: $('html').offset().top
 			}, 500);
-			
+
 			return false;
 		});
-	
-	};
-
-
-	// Page Nav
-	var clickMenu = function() {
-		var topVal = ( $(window).width() < 769 ) ? 0 : 58;
-
-		$(window).resize(function(){
-			topVal = ( $(window).width() < 769 ) ? 0 : 58;		
-		});
-		$('.fh5co-main-nav a:not([class="external"]), #fh5co-offcanvas a:not([class="external"])').click(function(event){
-			var section = $(this).data('nav-section');
-
-				if ( $('div[data-section="' + section + '"]').length ) {
-
-					$('html, body').animate({
-			        	scrollTop: $('div[data-section="' + section + '"]').offset().top - topVal
-			    	}, 500);	
-			    	
-			   }
-
-		    event.preventDefault();
-
-		    // return false;
-		});
-
 
 	};
 
-	// Reflect scrolling in navigation
-	var navActive = function(section) {
-		
-		$('.fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active');
-		$('.fh5co-main-nav, #fh5co-offcanvas').find('a[data-nav-section="'+section+'"]').addClass('active');
-		
-	};
+	var aboutAnimate = function () {
+		var about = $('#about');
+		if (about.length > 0) {
 
-	var navigationSection = function() {
+			about.waypoint(function (direction) {
 
-		var $section = $('div[data-section]');
-		
-		$section.waypoint(function(direction) {
-		  	if (direction === 'down') {
-		    	navActive($(this.element).data('section'));
-		  	}
-
-		}, {
-	  		offset: '150px'
-		});
-
-		$section.waypoint(function(direction) {
-		  	if (direction === 'up') {
-		    	navActive($(this.element).data('section'));
-		  	}
-		}, {
-		  	offset: function() { return -$(this.element).height() + 155; }
-		});
-
-	};
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-	// Animations
-	var homeAnimate = function() {
-		if ( $('#fh5co-home').length > 0 ) {	
-
-			$('#fh5co-home').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-
-
-					setTimeout(function() {
-						$('#fh5co-home .to-animate').each(function( k ) {
+					setTimeout(function () {
+						about.find('.to-animate').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
-					
-					$(this.element).addClass('animated');
-						
-				}
-			} , { offset: '80%' } );
-
-		}
-	};
-
-
-
-	var aboutAnimate = function() {
-		var about = $('#fh5co-about');
-		if ( about.length > 0 ) {	
-
-			about.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-
-
-					setTimeout(function() {
-						about.find('.to-animate').each(function( k ) {
+					setTimeout(function () {
+						about.find('.to-animate-2').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
-								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
-						});
-					}, 200);
 
-					setTimeout(function() {
-						about.find('.to-animate-2').each(function( k ) {
-							var el = $(this);
-							
-							setTimeout ( function () {
+							setTimeout(function () {
 								el.addClass('fadeIn animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
-					
+
 
 					$(this.element).addClass('animated');
-						
+
 				}
-			} , { offset: '80%' } );
+			}, { offset: '80%' });
 
 		}
 	};
 
-	var sayingsAnimate = function() {
-		var sayings = $('#fh5co-sayings');
-		if ( sayings.length > 0 ) {	
+	var sayingsAnimate = function () {
+		var sayings = $('#sayings');
+		if (sayings.length > 0) {
 
-			sayings.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+			sayings.waypoint(function (direction) {
+
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-					setTimeout(function() {
-						sayings.find('.to-animate').each(function( k ) {
+					setTimeout(function () {
+						sayings.find('.to-animate').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
 
 					$(this.element).addClass('animated');
-						
+
 				}
-			} , { offset: '80%' } );
+			}, { offset: '80%' });
 
 		}
 	};
 
-	var featureAnimate = function() {
-		var feature = $('#fh5co-featured');
-		if ( feature.length > 0 ) {	
+	var featureAnimate = function () {
+		var feature = $('#featured');
+		if (feature.length > 0) {
 
-			feature.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+			feature.waypoint(function (direction) {
+
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-					setTimeout(function() {
-						feature.find('.to-animate').each(function( k ) {
+					setTimeout(function () {
+						feature.find('.to-animate').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
-					setTimeout(function() {
-						feature.find('.to-animate-2').each(function( k ) {
+					setTimeout(function () {
+						feature.find('.to-animate-2').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('bounceIn animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 500);
 
 
 					$(this.element).addClass('animated');
-						
+
 				}
-			} , { offset: '80%' } );
+			}, { offset: '80%' });
 
 		}
 	};
 
-	var typeAnimate = function() {
-		var type = $('#fh5co-type');
-		if ( type.length > 0 ) {	
+	var typeAnimate = function () {
+		var type = $('#type');
+		if (type.length > 0) {
 
-			type.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+			type.waypoint(function (direction) {
+
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-					setTimeout(function() {
-						type.find('.to-animate').each(function( k ) {
+					setTimeout(function () {
+						type.find('.to-animate').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
 					$(this.element).addClass('animated');
-						
+
 				}
-			} , { offset: '80%' } );
+			}, { offset: '80%' });
 
 		}
 	};
 
-	var foodMenusAnimate = function() {
-		var menus = $('#fh5co-menus');
-		if ( menus.length > 0 ) {	
+	var foodMenusAnimate = function () {
+		var menus = $('#menus');
+		if (menus.length > 0) {
 
-			menus.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+			menus.waypoint(function (direction) {
+
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-					setTimeout(function() {
-						menus.find('.to-animate').each(function( k ) {
+					setTimeout(function () {
+						menus.find('.to-animate').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
-					setTimeout(function() {
-						menus.find('.to-animate-2').each(function( k ) {
+					setTimeout(function () {
+						menus.find('.to-animate-2').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeIn animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 500);
 
 					$(this.element).addClass('animated');
-						
+
 				}
-			} , { offset: '80%' } );
+			}, { offset: '80%' });
 
 		}
 	};
 
+	var eventsAnimate = function () {
+		var events = $('#events');
+		if (events.length > 0) {
 
-	var eventsAnimate = function() {
-		var events = $('#fh5co-events');
-		if ( events.length > 0 ) {	
+			events.waypoint(function (direction) {
 
-			events.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-					setTimeout(function() {
-						events.find('.to-animate').each(function( k ) {
+					setTimeout(function () {
+						events.find('.to-animate').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeIn animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
-					setTimeout(function() {
-						events.find('.to-animate-2').each(function( k ) {
+					setTimeout(function () {
+						events.find('.to-animate-2').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 500);
 
 					$(this.element).addClass('animated');
-						
+
 				}
-			} , { offset: '80%' } );
+			}, { offset: '80%' });
 
 		}
 	};
 
-	var reservationAnimate = function() {
-		var contact = $('#fh5co-contact');
-		if ( contact.length > 0 ) {	
+	var reservationAnimate = function () {
+		var contact = $('#contact');
+		if (contact.length > 0) {
 
-			contact.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+			contact.waypoint(function (direction) {
+
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
 
-					setTimeout(function() {
-						contact.find('.to-animate').each(function( k ) {
+					setTimeout(function () {
+						contact.find('.to-animate').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeIn animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 200);
 
-					setTimeout(function() {
-						contact.find('.to-animate-2').each(function( k ) {
+					setTimeout(function () {
+						contact.find('.to-animate-2').each(function (k) {
 							var el = $(this);
-							
-							setTimeout ( function () {
+
+							setTimeout(function () {
 								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
+							}, k * 200, 'easeInOutExpo');
+
 						});
 					}, 500);
 
 					$(this.element).addClass('animated');
-						
+
 				}
-			} , { offset: '80%' } );
+			}, { offset: '80%' });
 
 		}
 	};
-
-	var footerAnimate = function() {
-		var footer = $('#fh5co-footer');
-		if ( footer.length > 0 ) {	
-
-			footer.waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-
-
-					setTimeout(function() {
-						footer.find('.to-animate').each(function( k ) {
-							var el = $(this);
-							
-							setTimeout ( function () {
-								el.addClass('fadeIn animated');
-							},  k * 200, 'easeInOutExpo' );
-							
-						});
-					}, 200);
-
-					setTimeout(function() {
-						footer.find('.to-animate-2').each(function( k ) {
-							var el = $(this);
-							
-							setTimeout ( function () {
-								el.addClass('fadeInUp animated');
-							},  k * 200, 'easeInOutExpo' );
-							
-						});
-					}, 500);
-
-					$(this.element).addClass('animated');
-						
-				}
-			} , { offset: '80%' } );
-
-		}
-	};
-	
 
 
 	// Document on load.
-	$(function(){
-
-		fullHeight();
-		sliderMain();
-		sliderSayings();
-		offcanvasMenu();
-		mainMenuSticky();
+	$(function () {
 		parallax();
-		burgerMenu();
 		scrolledWindow();
-		clickMenu();
-		navigationSection();
 		goToTop();
 
-
 		// Animations
-		homeAnimate();
 		aboutAnimate();
 		sayingsAnimate();
 		featureAnimate();
@@ -589,10 +323,18 @@
 		foodMenusAnimate();
 		eventsAnimate();
 		reservationAnimate();
-		footerAnimate();
 
-		
-
+		new Swiper('.swiper', {
+			direction: 'horizontal',
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
 	});
 
 

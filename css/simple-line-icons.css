@@ -8,6 +8,7 @@
         url('../fonts/simple-line-icons/Simple-Line-Icons.svg?v=2.2.2#simple-line-icons') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 /*
  Use the following CSS code if you want to have a class per icon.

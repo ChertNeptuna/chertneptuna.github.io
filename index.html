@@ -1,675 +1,561 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
+
+<html lang="ru">
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Foodee &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<title>ЖуйВкусно</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+	<meta name="description"
+		content="ЖуйВкусно — уютный ресторан в Москве с авторской кухней, свежими продуктами и атмосферой для встреч с друзьями. Попробуйте фирменные блюда, стейки, напитки и десерты. Бронирование столиков онлайн.">
+	<meta name="keywords"
+		content="ресторан, Москва, авторская кухня, бронирование, меню, стейки, напитки, семейный ресторан, уют, гастрономия, ЖуйВкусно, лучшие рестораны Москвы, свежие продукты">
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic' rel='stylesheet' type='text/css'>
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Simple Line Icons -->
-	<link rel="stylesheet" href="css/simple-line-icons.css">
-	<!-- Datetimepicker -->
-	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-	<!-- Flexslider -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="preload" href="css/critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/icomoon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/simple-line-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/flatpickr.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/simple-line-icons.css">
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/flatpickr.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</noscript>
+</head>
 
+<body>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-
-	<div id="fh5co-container">
-		<div id="fh5co-home" class="js-fullheight" data-section="home">
-
-			<div class="flexslider">
-				
-				<div class="fh5co-overlay"></div>
-				<div class="fh5co-text">
-					<div class="container">
-						<div class="row">
-							<h1 class="to-animate">foodee</h1>
-							<h2 class="to-animate">Lovely Designed <span>by</span> <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-						</div>
-					</div>
-				</div>
-			  	<ul class="slides">
-			   	<li style="background-image: url(images/slide_1.jpg);" data-stellar-background-ratio="0.5"></li>
-			   	<li style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5"></li>
-			   	<li style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5"></li>
-			  	</ul>
-
-			</div>
-			
-		</div>
-		
-		<div class="js-sticky">
-			<div class="fh5co-main-nav">
-				<div class="container-fluid">
-					<div class="fh5co-menu-1">
-						<a href="#" data-nav-section="home">Home</a>
-						<a href="#" data-nav-section="about">About</a>
-						<a href="#" data-nav-section="features">Features</a>
-					</div>
-					<div class="fh5co-logo">
-						<a href="index.html">foodee</a>
-					</div>
-					<div class="fh5co-menu-2">
-						<a href="#" data-nav-section="menu">Menu</a>
-						<a href="#" data-nav-section="events">Events</a>
-						<a href="#" data-nav-section="reservation">Reservation</a>
-					</div>
-				</div>
-				
+	<main>
+		<div id="home" style="height: 110vh;">
+			<div class="text" id="homeAnimation">
+				<h1>ЖуйВкусно</h1>
+				<h2>Добро пожаловать в уютный ресторан с авторской кухней!</h2>
 			</div>
 		</div>
 
-		<div id="fh5co-about" data-section="about">
-			<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(images/res_img_1.jpg)"></div>
-			<div class="fh5co-2col fh5co-text">
-				<h2 class="heading to-animate">About Us</h2>
-				<p class="to-animate"><span class="firstcharacter">F</span>ar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
-				<p class="text-center to-animate"><a href="#" class="btn btn-primary btn-outline">Get in touch</a></p>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+			<div class="container-fluid">
+				<!-- Only Mobile -->
+				<a class="navbar-brand fw-bold mx-auto d-block d-lg-none" href="/">ЖуйВкусно</a>
+
+				<!-- Dont forget to change in offcanvas  -->
+				<div class="collapse navbar-collapse justify-content-evenly d-none d-lg-block" id="mainNavbar">
+					<div class="navbar-nav">
+						<a class="nav-link" href="#home" data-nav-section="home">Главная</a>
+						<a class="nav-link" href="#about" data-nav-section="about">О нас</a>
+						<a class="nav-link" href="#featured" data-nav-section="features">Особенности</a>
+					</div>
+
+					<!-- Only Desktop -->
+					<a class="navbar-brand fw-bold" href="/">ЖуйВкусно</a>
+
+					<div class="navbar-nav">
+						<a class="nav-link" href="#menus" data-nav-section="menu">Меню</a>
+						<a class="nav-link" href="#events" data-nav-section="events">События</a>
+						<a class="nav-link" href="#contact" data-nav-section="reservation">Бронирование</a>
+					</div>
+				</div>
+
+				<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Offcanvas Navar for Mobile -->
+		<div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
+			aria-labelledby="offcanvasNavbarLabel" data-bs-scroll="true">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					<li class="nav-item">
+						<a class="nav-link" href="#home" data-nav-section="home">Главная</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about" data-nav-section="about">О нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#featured" data-nav-section="features">Особенности</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#menus" data-nav-section="menu">Меню</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#events" data-nav-section="events">События</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact" data-nav-section="reservation">Бронирование</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 
-		<div id="fh5co-sayings">
-			<div class="container">
-				<div class="row to-animate">
-
-					<div class="flexslider">
-						<ul class="slides">
-							
-							<li>
-								<blockquote>
-									<p>&ldquo;Cooking is an art, but all art requires knowing something about the techniques and materials&rdquo;</p>
-									<p class="quote-author">&mdash; Nathan Myhrvold</p>
-								</blockquote>
-							</li>
-							<li>
-								<blockquote>
-									<p>&ldquo;Give a man food, and he can eat for a day. Give a man a job, and he can only eat for 30 minutes on break.&rdquo;</p>
-									<p class="quote-author">&mdash; Lev L. Spiro</p>
-								</blockquote>
-							</li>
-							<li>
-								<blockquote>
-									<p>&ldquo;Find something you’re passionate about and keep tremendously interested in it.&rdquo;</p>
-									<p class="quote-author">&mdash; Julia Child</p>
-								</blockquote>
-							</li>
-							<li>
-								<blockquote>
-									<p>&ldquo;Never work before breakfast; if you have to work before breakfast, eat your breakfast first.&rdquo;</p>
-									<p class="quote-author">&mdash; Josh Billings</p>
-								</blockquote>
-							</li>
-							
-							
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-featured" data-section="features">
-			<div class="container">
-				<div class="row text-center fh5co-heading row-padded">
-					<div class="col-md-8 col-md-offset-2">
-						<h2 class="heading to-animate">Featured Dishes</h2>
-						<p class="sub-heading to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="fh5co-grid">
-						<div class="fh5co-v-half to-animate-2">
-							<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_1.jpg)"></div>
-							<div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-								<h2>Fresh Mushrooms</h2>
-								<span class="pricing">$7.50</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							</div>
-						</div>
-						<div class="fh5co-v-half">
-							<div class="fh5co-h-row-2 to-animate-2">
-								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_2.jpg)"></div>
-								<div class="fh5co-v-col-2 fh5co-text arrow-left">
-									<h2>Grilled Chiken Salad</h2>
-									<span class="pricing">$12.00</span>
-									<p>Far far away, behind the word mountains.</p>
-								</div>
-							</div>
-							<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
-								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_8.jpg)"></div>
-								<div class="fh5co-v-col-2 fh5co-text arrow-right">
-									<h2>Cheese and Garlic Toast</h2>
-									<span class="pricing">$4.50</span>
-									<p>Far far away, behind the word mountains.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="fh5co-v-half">
-							<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
-								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_7.jpg)"></div>
-								<div class="fh5co-v-col-2 fh5co-text arrow-right">
-									<h2>Organic Egg</h2>
-									<span class="pricing">$4.99</span>
-									<p>Far far away, behind the word mountains.</p>
-								</div>
-							</div>
-							<div class="fh5co-h-row-2 to-animate-2">
-								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_6.jpg)"></div>
-								<div class="fh5co-v-col-2 fh5co-text arrow-left">
-									<h2>Salad with Crispy Chicken</h2>
-									<span class="pricing">$8.50</span>
-									<p>Far far away, behind the word mountains.</p>
-								</div>
-							</div>
-						</div>
-						<div class="fh5co-v-half to-animate-2">
-							<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_3.jpg)"></div>
-							<div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-								<h2>Tomato Soup with Chicken</h2>
-								<span class="pricing">$12.99</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<div id="fh5co-type" style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5">
-			<div class="fh5co-overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 to-animate">
-						<div class="fh5co-type">
-							<h3 class="with-icon icon-1">Fruits</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-					<div class="col-md-3 to-animate">
-						<div class="fh5co-type">
-							<h3 class="with-icon icon-2">Sea food</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-					<div class="col-md-3 to-animate">
-						<div class="fh5co-type">
-							<h3 class="with-icon icon-3">Vegetables</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-					<div class="col-md-3 to-animate">
-						<div class="fh5co-type">
-							<h3 class="with-icon icon-4">Meat</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-menus" data-section="menu">
-			<div class="container">
-				<div class="row text-center fh5co-heading row-padded">
-					<div class="col-md-8 col-md-offset-2">
-						<h2 class="heading to-animate">Food Menu</h2>
-						<p class="sub-heading to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row row-padded">
-					<div class="col-md-6">
-						<div class="fh5co-food-menu to-animate-2">
-							<h2 class="fh5co-drinks">Drinks</h2>
-							<ul>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_5.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Pineapple Juice</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$17.50
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_6.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Green Juice</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$7.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_7.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Soft Drinks</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_5.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Carlo Rosee Drinks</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="fh5co-food-menu to-animate-2">
-							<h2 class="fh5co-dishes">Steak</h2>
-							<ul>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_3.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Beef Steak</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$17.50
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_4.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Tomato with Chicken</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$7.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_2.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Sausages from Italy</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_8.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Beef Grilled</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="fh5co-food-menu to-animate-2">
-							<h2 class="fh5co-drinks">Drinks</h2>
-							<ul>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_5.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Pineapple Juice</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$17.50
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_6.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Green Juice</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$7.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_7.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Soft Drinks</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_5.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Carlo Rosee Drinks</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="fh5co-food-menu to-animate-2">
-							<h2 class="fh5co-dishes">Steak</h2>
-							<ul>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_3.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Beef Steak</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$17.50
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_4.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Tomato with Chicken</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$7.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_2.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Sausages from Italy</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-								<li>
-									<div class="fh5co-food-desc">
-										<figure>
-											<img src="images/res_img_8.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-										</figure>
-										<div>
-											<h3>Beef Grilled</h3>
-											<p>Far far away, behind the word mountains.</p>
-										</div>
-									</div>
-									<div class="fh5co-food-pricing">
-										$12.99
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 col-md-offset-4 text-center to-animate-2">
-						<p><a href="#" class="btn btn-primary btn-outline">More Food Menu</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-events" data-section="events" style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5">
-			<div class="fh5co-overlay"></div>
-			<div class="container">
-				<div class="row text-center fh5co-heading row-padded">
-					<div class="col-md-8 col-md-offset-2 to-animate">
-						<h2 class="heading">Upcoming Events</h2>
-						<p class="sub-heading">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="fh5co-event to-animate-2">
-							<h3>Kitchen Workshops</h3>
-							<span class="fh5co-event-meta">March 19th, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="fh5co-event to-animate-2">
-							<h3>Music Concerts</h3>
-							<span class="fh5co-event-meta">March 19th, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="fh5co-event to-animate-2">
-							<h3>Free to Eat Party</h3>
-							<span class="fh5co-event-meta">March 19th, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-contact" data-section="reservation">
-			<div class="container">
-				<div class="row text-center fh5co-heading row-padded">
-					<div class="col-md-8 col-md-offset-2">
-						<h2 class="heading to-animate">Reserve a Table</h2>
-						<p class="sub-heading to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 to-animate-2">
-						<h3>Contact Info</h3>
-						<ul class="fh5co-contact-info">
-							<li class="fh5co-contact-address ">
-								<i class="icon-home"></i>
-								5555 Love Paradise 56 New Clity 5655, <br>Excel Tower United Kingdom
-							</li>
-							<li><i class="icon-phone"></i> (123) 465-6789</li>
-							<li><i class="icon-envelope"></i>info@freehtml5.co</li>
-							<li><i class="icon-globe"></i> <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></li>
-						</ul>
-					</div>
-					<div class="col-md-6 to-animate-2">
-						<h3>Reservation Form</h3>
-						<div class="form-group ">
-							<label for="name" class="sr-only">Name</label>
-							<input id="name" class="form-control" placeholder="Name" type="text">
-						</div>
-						<div class="form-group ">
-							<label for="email" class="sr-only">Email</label>
-							<input id="email" class="form-control" placeholder="Email" type="email">
-						</div>
-						<div class="form-group">
-							<label for="occation" class="sr-only">Occation</label>
-							<select class="form-control" id="occation">
-								<option>Select an Occation</option>
-							  <option>Wedding Ceremony</option>
-							  <option>Birthday</option>
-							  <option>Others</option>
-							</select>
-						</div>
-						<div class="form-group ">
-							<label for="date" class="sr-only">Date</label>
-							<input id="date" class="form-control" placeholder="Date &amp; Time" type="text">
-						</div>
-
-
-							
-						<div class="form-group ">
-							<label for="message" class="sr-only">Message</label>
-							<textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-						</div>
-						<div class="form-group ">
-							<input class="btn btn-primary" value="Send Message" type="submit">
-						</div>
-						</div>
-				</div>
-			</div>
-		</div>
-
-		
-	</div>
-
-	<div id="fh5co-footer">
-		<div class="container">
-			<div class="row row-padded">
-				<div class="col-md-12 text-center">
-					<p class="to-animate">&copy; 2025 Foodee Free HTML5 Template. <br> Designed by chertneptuna Demo Images: <a href="http://pexels.com/" target="_blank">Pexels</a> <br> Tasty Icons Free <a href="http://handdrawngoods.com/store/tasty-icons-free-food-icons/" target="_blank">handdrawngoods</a>
+		<div id="about">
+			<img class="col2" src="images/res_img_1.webp" loading="lazy" alt="Background Image" />
+			<div class="col2 text bg-container">
+				<img src="images/wood_1.webp" alt="Backgroun Image" class="bg" loading="lazy">
+				<div class="text-center mx-2">
+					<h2 class="primary-text to-animate mt-2">О нас</h2>
+					<p class="first-letter to-animate">
+						ЖуйВкусно — это место, где встречаются
+						традиции и современные гастрономические идеи. Мы используем только свежие продукты, чтобы
+						создавать
+						блюда, которые радуют вкус и удивляют подачей. Наши повара — настоящие мастера своего дела, а
+						атмосфера ресторана располагает к приятному отдыху и встречам с друзьями.
 					</p>
-					<p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<ul class="fh5co-social">
-						<li class="to-animate-2"><a href="#"><i class="icon-facebook"></i></a></li>
-						<li class="to-animate-2"><a href="#"><i class="icon-twitter"></i></a></li>
-						<li class="to-animate-2"><a href="#"><i class="icon-instagram"></i></a></li>
-					</ul>
+					<p class="text-center to-animate">
+						<a href="#" class="btn btn-primary btn-outline text-white">Связаться с нами</a>
+					</p>
 				</div>
 			</div>
 		</div>
-	</div>
+
+		<div id="sayings">
+			<div class="mx-4">
+				<div class="row to-animate">
+					<div class="swiper" style="height: 100%; width: 100%;">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<blockquote>
+									<p>&ldquo;Готовка — это искусство, но любое искусство требует знания техник и
+										материалов&rdquo;</p>
+									<p class="quote-author">&mdash; Натан Мирволд</p>
+								</blockquote>
+							</div>
+							<div class="swiper-slide">
+								<blockquote>
+									<p>&ldquo;Дай человеку еду — он будет сыт день. Дай человеку работу — он сможет
+										поесть только 30 минут на обеде.&rdquo;</p>
+									<p class="quote-author">&mdash; Лев Л. Спиро</p>
+								</blockquote>
+							</div>
+							<div class="swiper-slide">
+								<blockquote>
+									<p>&ldquo;Найдите то, что вас вдохновляет, и сохраняйте к этому огромный
+										интерес.&rdquo;</p>
+									<p class="quote-author">&mdash; Джулия Чайлд</p>
+								</blockquote>
+							</div>
+							<div class="swiper-slide">
+								<blockquote>
+									<p>&ldquo;Никогда не работайте до завтрака; если нужно работать до завтрака,
+										сначала
+										позавтракайте.&rdquo;</p>
+									<p class="quote-author">&mdash; Джош Биллингс</p>
+								</blockquote>
+							</div>
+
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="featured">
+			<div class="d-flex align-items-center justify-content-center text-center heading row-padded">
+				<div class="col-md-8 col-md-offset-2">
+					<h2 class="heading to-animate">Избранные блюда</h2>
+					<p class="sub-heading to-animate">Попробуйте наши фирменные блюда, приготовленные с любовью и
+						вниманием к деталям. Каждый рецепт — это гармония вкуса и свежести.</p>
+				</div>
+			</div>
+			<div class="mx-5">
+				<div class="row g-4 bg-white rounded">
+					<div class="to-animate card-menu col-12 col-lg-6 d-flex flex-column flex-md-row align-items-center gap-4">
+						<img src="images/fresh_mushrooms.webp" class="img-fluid rounded" alt="Свежие грибы"
+							style="max-width: 200px;" loading="lazy">
+						<div>
+							<h3>Свежие грибы</h3>
+							<span class="pricing">$7,50</span>
+							<p class="mb-0">Ароматные лесные грибы, обжаренные с луком и зеленью, подаются с
+								домашним хлебом.</p>
+						</div>
+					</div>
+
+					<div class="to-animate card-menu col-12 col-lg-6 d-flex flex-column flex-md-row align-items-center gap-4">
+						<img src="images/grilled_chicken_salad.webp" class="img-fluid rounded"
+							alt="Салат с курицей-гриль" style="max-width: 200px;" loading="lazy">
+						<div>
+							<h3>Салат с курицей-гриль</h3>
+							<span class="pricing">$12,00</span>
+							<p class="mb-0">Сочный салат с курицей-гриль, свежими овощами и фирменной заправкой.</p>
+						</div>
+					</div>
+
+					<div class="to-animate card-menu col-12 col-lg-6 d-flex flex-column flex-md-row align-items-center gap-4">
+						<img src="images/garlic_toast.webp" class="img-fluid rounded" alt="Тост с сыром и чесноком"
+							style="max-width: 200px;" loading="lazy">
+						<div>
+							<h3>Тост с сыром и чесноком</h3>
+							<span class="pricing">$4,50</span>
+							<p class="mb-0">Хрустящий тост с нежным сыром и ароматным чесноком — идеальная закуска.
+							</p>
+						</div>
+					</div>
+
+					<div class="to-animate card-menu col-12 col-lg-6 d-flex flex-column flex-md-row align-items-center gap-4">
+						<img src="images/organic_egg.webp" class="img-fluid rounded" alt="Органическое яйцо"
+							style="max-width: 200px;" loading="lazy">
+						<div>
+							<h3>Органическое яйцо</h3>
+							<span class="pricing">$4,99</span>
+							<p class="mb-0">Яйцо от фермерских кур, приготовленное пашот и поданное с зелёным
+								соусом.</p>
+						</div>
+					</div>
+
+					<div class="to-animate card-menu col-12 col-lg-6 d-flex flex-column flex-md-row align-items-center gap-4">
+						<img src="images/crunchy_chicken.webp" class="img-fluid rounded" alt="Салат с хрустящей курицей"
+							style="max-width: 200px;" loading="lazy">
+						<div>
+							<h3>Салат с хрустящей курицей</h>
+								<span class="pricing">$8,50</span>
+								<p class="mb-0">Лёгкий салат с кусочками хрустящей курицы, свежими овощами и кунжутом.
+								</p>
+						</div>
+					</div>
+
+					<div class="to-animate card-menu col-12 col-lg-6 d-flex flex-column flex-md-row align-items-center gap-4">
+						<img src="images/tomatoes_soup.webp" class="img-fluid rounded" alt="Томатный суп с курицей"
+							style="max-width: 200px;" loading="lazy">
+						<div>
+							<h3>Томатный суп с курицей</h3>
+							<span class="pricing">$12,99</span>
+							<p class="mb-0">Насыщенный томатный суп с кусочками курицы и свежей зеленью.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="type">
+			<div class="container-fluid with-overlay">
+				<div class="row">
+					<div class="col-md-3 to-animate">
+						<div class="type">
+							<h3 class="with-icon icon-1">Фрукты</h3>
+							<p>Свежие сезонные фрукты из лучших хозяйств России и мира.</p>
+						</div>
+					</div>
+					<div class="col-md-3 to-animate">
+						<div class="type">
+							<h3 class="with-icon icon-2">Морепродукты</h3>
+							<p>Отборные морепродукты, доставленные прямо с побережья, для истинных гурманов.</p>
+						</div>
+					</div>
+					<div class="col-md-3 to-animate">
+						<div class="type">
+							<h3 class="with-icon icon-3">Овощи</h3>
+							<p>Только свежие и полезные овощи, выращенные с заботой о качестве.</p>
+						</div>
+					</div>
+					<div class="col-md-3 to-animate">
+						<div class="type">
+							<h3 class="with-icon icon-4">Мясо</h3>
+							<p>Премиальное мясо от проверенных поставщиков для сочных и насыщенных блюд.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="menus">
+			<div class="mx-4">
+				<div class="row text-center d-flex align-items-center justify-content-center heading row-padded">
+					<div class="col-md-8 col-md-offset-2">
+						<h2 class="heading to-animate">Меню</h2>
+						<p class="sub-heading to-animate">Откройте для себя разнообразие вкусов — от классических до
+							авторских блюд, приготовленных с душой.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-lg-6">
+						<div class="food-menu to-animate-2">
+							<h2 class="drinks">Напитки</h2>
+							<ul>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/pineapple_juice.webp" class="img-responsive"
+												alt="Pineapple Juice" loading="lazy">
+										</figure>
+										<div>
+											<h3>Ананасовый сок</h3>
+											<p>Свежевыжатый ананасовый сок, насыщенный витаминами и вкусом.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										17,50 $
+									</div>
+								</li>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/green_juice.webp" class="img-responsive" alt="Green Juice"
+												loading="lazy">
+										</figure>
+										<div>
+											<h3>Зелёный сок</h3>
+											<p>Микс из яблока, огурца и шпината для бодрости и энергии.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										7,99 $
+									</div>
+								</li>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/soft_drinks.webp" class="img-responsive" alt="Soft Drinks"
+												loading="lazy">
+										</figure>
+										<div>
+											<h3>Безалкогольные напитки</h3>
+											<p>Ассортимент освежающих лимонадов и морсов собственного приготовления.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										12,99 $
+									</div>
+								</li>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/carlo_rosee_special.webp" class="img-responsive"
+												alt="Carlo Rosee Drinks" loading="lazy">
+										</figure>
+										<div>
+											<h3>Напитки Carlo Rosee</h3>
+											<p>Эксклюзивные авторские коктейли от нашего бармена.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										12,99 $
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="food-menu to-animate-2">
+							<h2 class="dishes">Стейки</h2>
+							<ul>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/beef_steak.webp" class="img-responsive" alt="Beef Steak"
+												loading="lazy">
+										</figure>
+										<div>
+											<h3>Говяжий стейк</h3>
+											<p>Классический стейк из мраморной говядины, приготовленный на гриле.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										17,50 $
+									</div>
+								</li>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/chicken_tomatoes.webp" class="img-responsive"
+												alt="Tomato with Chicken" loading="lazy">
+										</figure>
+										<div>
+											<h3>Томаты с курицей</h3>
+											<p>Запечённые томаты, фаршированные нежной курицей и сыром.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										7,99 $
+									</div>
+								</li>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/italian_sausages.webp" class="img-responsive"
+												alt="Sausages from Italy" loading="lazy">
+										</figure>
+										<div>
+											<h3>Колбаски из Италии</h3>
+											<p>Пикантные итальянские колбаски, подаются с соусом песто.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										12,99 $
+									</div>
+								</li>
+								<li>
+									<div class="food-desc">
+										<figure>
+											<img src="images/menu/grilled_beef.webp" class="img-responsive" alt="Beef Grilled"
+												loading="lazy">
+										</figure>
+										<div>
+											<h3>Говядина на гриле</h3>
+											<p>Сочные кусочки говядины, обжаренные на открытом огне с пряностями.</p>
+										</div>
+									</div>
+									<div class="food-pricing">
+										12,99 $
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 w-100 to-animate-2">
+						<p><a href="#" class="btn btn-primary btn-outline w-100">Больше блюд</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="events">
+			<div class="overlay"></div>
+			<div class="container-fluid">
+				<div class="row heading d-flex align-items-center justify-content-center row-padded">
+					<div class="col-md-12 col-md-offset-2 to-animate">
+						<h2 class="heading text-center">Ближайшие события</h2>
+						<p class="sub-heading text-center">Следите за нашими мероприятиями и присоединяйтесь к
+							гастрономическим открытиям!</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="event to-animate-2">
+							<h3>Кулинарные мастер-классы</h3>
+							<span class="event-meta">19 марта 2025</span>
+							<p>Освойте новые рецепты под руководством нашего шеф-повара. Запись обязательна!</p>
+							<p><a href="#" class="btn btn-primary btn-outline">Подробнее</a></p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="event to-animate-2">
+							<h3>Музыкальные концерты</h3>
+							<span class="event-meta">26 марта 2025</span>
+							<p>Живая музыка каждую пятницу — создаём атмосферу праздника для вас и ваших друзей.</p>
+							<p><a href="#" class="btn btn-primary btn-outline">Подробнее</a></p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="event to-animate-2">
+							<h3>Вечеринка "Ешь бесплатно"</h3>
+							<span class="event-meta">2 апреля 2025</span>
+							<p>Уникальная акция: закажите напиток — получите закуску в подарок! Только один вечер.</p>
+							<p><a href="#" class="btn btn-primary btn-outline">Подробнее</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="contact">
+			<div class="mx-4">
+				<div class="row d-flex align-items-center justify-content-center heading row-padded">
+					<div class="col-md-8 col-md-offset-2">
+						<h2 class="heading to-animate text-center">Забронировать столик</h2>
+						<p class="sub-heading to-animate text-center">Оставьте заявку — и мы свяжемся с вами для
+							подтверждения бронирования.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 to-animate-2 mb-5" style="word-wrap: break-word;">
+						<h3>Контактная информация</h3>
+						<ul class="contact-info">
+							<li class="contact-address ">
+								<i class="icon-home"></i>
+								Россия, г. Москва, ул. Ленина, д. 1
+							</li>
+							<li><i class="icon-phone"></i> +7 (123) 465 67 89</li>
+							<li><i class="icon-envelope"></i>contact@juwtasty.com</li>
+						</ul>
+					</div>
+					<div class="col-md-8 to-animate-2">
+						<h3>Форма бронирования</h3>
+						<form>
+							<div class="mb-3">
+								<label for="name" class="form-label">Имя</label>
+								<input type="text" class="form-control" id="name" placeholder="Имя" autocomplete="name">
+							</div>
+							<div class="mb-3">
+								<label for="email" class="form-label">Электронная почта</label>
+								<input type="email" class="form-control" id="email" placeholder="Email"
+									autocomplete="email">
+							</div>
+							<div class="mb-3">
+								<label for="occation" class="form-label">Повод</label>
+								<select class="form-select" id="occation" autocomplete="off">
+									<option>Выберите повод</option>
+									<option>Свадебная церемония</option>
+									<option>День рождения</option>
+									<option>Другое</option>
+								</select>
+							</div>
+							<div class="mb-3">
+								<label class="form-label" for="datetimePicker">Выберите дату и время</label>
+								<input type="text" class="form-control" id="datetimePicker" placeholder="Дата - Время"
+									autocomplete="off">
+							</div>
+
+							<div class="mb-3">
+								<label for="message" class="form-label">Сообщение</label>
+								<textarea name="" id="message" cols="30" rows="7" class="form-control"
+									placeholder="Сообщение" autocomplete="off"></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary w-100">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		</mai>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p>&copy; 2025 ЖуйВкусно
+						</p>
+						<p class="text-center"><a href="#" class="js-gotop">Наверх</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 
-	
-	
-	
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Bootstrap DateTimePicker -->
-	<script src="js/moment.js"></script>
-	<script src="js/bootstrap-datetimepicker.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/jquery.min.js" defer></script>
+		<script src="js/jquery.easing.1.3.js" defer></script>
+		<script src="js/bootstrap.min.js" defer></script>
+		<script src="js/moment.js" defer></script>
+		<script src="js/jquery.waypoints.min.js" defer></script>
+		<script src="js/jquery.stellar.min.js" defer></script>
+		<script src="js/modernizr-2.6.2.min.js" defer></script>
+		<script src="js/swiper-bundle.min.js" defer></script>
+		<script src="js/flatpickr.min.js" defer></script>
+		<script src="js/flatpickr-ru.min.js" defer></script>
+		<script src="js/main.js" defer></script>
 
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<script>
-		$(function () {
-	       $('#date').datetimepicker();
-	   });
-	</script>
-	<!-- Main JS -->
-	<script src="js/main.js"></script>
+</body>
 
-	</body>
 </html>
-
